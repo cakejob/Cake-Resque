@@ -14,7 +14,7 @@ use ResqueScheduler\ResqueScheduler;
 use ResqueScheduler\Stat;
 use ResqueStatus\ResqueStatus;
 use CakeResque\CakeResque;
-
+use  Cake\Console\ConsoleOptionParser;
 
 /**
  * CakeResque Shell File
@@ -70,7 +70,7 @@ class CakeResqueShell extends Shell
      *
      * @return void
      */
-    public function startup()
+    public function startup(): void
     {
         $reflector = new ReflectionClass('Resque');
         $this->_resqueLibrary = dirname(dirname($reflector->getFileName()));
@@ -85,12 +85,14 @@ class CakeResqueShell extends Shell
     }
 
     /**
-     * Get the option parser instance and configures it.
+     * Gets the option parser instance and configures it.
+     *
+     * By overriding this method you can configure the ConsoleOptionParser before returning it.
      *
      * @return ConsoleOptionParser
-     * @see Shell::getOptionParser()
+     * @link https://book.cakephp.org/4/en/console-and-shells.html#configuring-options-and-generating-help
      */
-    public function getOptionParser()
+    public function getOptionParser(): ConsoleOptionParser
     {
         $startParserArguments = [
             'options' => [
@@ -264,7 +266,7 @@ class CakeResqueShell extends Shell
         ];
 
         return parent::getOptionParser()
-            ->description(
+            ->setDescription(
                 __d('cake_resque', "A Shell to manage PHP Resque") . "\n" .
                 __d('cake_resque', "Version " . CakeResqueShell::VERSION) . "\n" .
                 "Wan Chen (" . date('Y') . ")"
@@ -1377,7 +1379,7 @@ class CakeResqueShell extends Shell
      * @since 3.3.0
      * @return bool False is clearing the queues fails.
      */
-    public function clear()
+    public function clear() :void
     {
         $this->out('<info>' . __d('cake_resque', 'Clearing queues') . '</info>');
 
@@ -1386,7 +1388,7 @@ class CakeResqueShell extends Shell
         if (empty($queues)) {
             $this->out(__d('cake_resque', 'There is no queues to clear'));
 
-            return false;
+            //return false;
         }
 
         $queueIndex = [];
@@ -1436,7 +1438,7 @@ class CakeResqueShell extends Shell
             }
         }
 
-        return true;
+        //return true;
     }
 
     /**
