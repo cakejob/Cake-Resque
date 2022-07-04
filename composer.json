@@ -23,7 +23,7 @@
             "type": "package",
             "package": {
                 "name": "cakejob/php-resque-ex",
-                "version": "master",
+                "version": "v1.0.1",
                 "source": {
                     "url": "https://github.com/cakejob/php-resque-ex.git",
                     "type": "git",
@@ -35,7 +35,7 @@
   "require": {
     "php": ">=7.3",
     "composer/installers": "*",
-    "cakejob/php-resque-ex": "master",
+    "cakejob/php-resque-ex": "v1.0.1",
     "kamisama/php-resque-ex-scheduler": ">=1.2.3",
     "kamisama/resque-status": ">=0.0.2"
   },
