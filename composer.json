@@ -20,14 +20,22 @@
   "license": "MIT",
   "repositories": [
         {
-          "url": "https://github.com/cakejob/php-resque-ex.git",
-          "type": "git"
+            "type": "package",
+            "package": {
+                "name": "cakejob/php-resque-ex",
+                "version": "master",
+                "source": {
+                    "url": "https://github.com/cakejob/php-resque-ex.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
   ],
   "require": {
     "php": ">=7.3",
     "composer/installers": "*",
-    "cakejob/php-resque-ex": "*",
+    "cakejob/php-resque-ex": "master",
     "kamisama/php-resque-ex-scheduler": ">=1.2.3",
     "kamisama/resque-status": ">=0.0.2"
   },
