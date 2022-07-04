@@ -18,7 +18,7 @@
   },
   "license": "MIT",
   "bugs": "https://github.com/kamisama/Cake-Resque/issues",
-  "github": "https://github.com/kamisama/Cake-Resque",
+  "github": "https://github.com/cakejob/cake-resque",
   "devDependencies": {
     "grunt-shell": "~0.2.2",
     "grunt-contrib-watch": "~0.4.0",
