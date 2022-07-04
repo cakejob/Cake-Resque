@@ -25,14 +25,14 @@
         }
   ],
   "require": {
-    "php": ">=7.4",
+    "php": ">=7.3",
     "composer/installers": "*",
-    "cakejob/php-resque-ex": "dev-master",
+    "cakejob/php-resque-ex": "*",
     "kamisama/php-resque-ex-scheduler": ">=1.2.3",
     "kamisama/resque-status": ">=0.0.2"
   },
   "require-dev": {
-    "mikey179/vfsStream": ">=1.6.0"
+    "mikey179/vfsstream": ">=1.6.1"
   },
   "support": {
     "issues": "https://github.com/kamisama/Cake-Resque/issues",
