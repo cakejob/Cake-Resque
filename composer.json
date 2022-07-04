@@ -20,8 +20,16 @@
   "license": "MIT",
   "repositories": [
         {
-          "url": "https://github.com/cakejob/php-resque-ex.git",
-          "type": "git"
+            "type": "package",
+            "package": {
+                "name": "cakejob/php-resque-ex",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/cakejob/php-resque-ex.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
         }
   ],
   "require": {
