@@ -22,7 +22,7 @@
     "php": ">=7.3",
     "composer/installers": "*",
     "cakejob/php-resque-ex": "^1.0",
-    "kamisama/php-resque-ex-scheduler": ">=1.2.3",
+    "cakejob/php-resque-ex-scheduler": "^1.0",
     "kamisama/resque-status": ">=0.0.2"
   },
   "require-dev": {
