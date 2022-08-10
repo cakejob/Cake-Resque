@@ -2,7 +2,7 @@
 namespace CakeResque\shell;
 
 use Cake\Console\Shell;
-use Cake\I18n\Time;
+use Cake\I18n\FrozenTime;
 use ReflectionClass;
 use Cake\Core\Configure;
 use Cake\Core\Plugin;
@@ -534,7 +534,7 @@ class CakeResqueShell extends Shell
 
         if ($formatListItem === null) {
             $formatListItem = function ($worker, $i) use ($ResqueStatus) {
-                $now = Time::parse(CakeResque::getWorkerStartDate($worker));
+                $now = FrozenTime::parse(CakeResque::getWorkerStartDate($worker));
                 return sprintf("    [%3d] - %s, started %s", $i, $ResqueStatus->isSchedulerWorker($worker) ? '<comment>**Scheduler Worker**</comment>' : $worker,
                     $now->timeAgoInWords());
             };
